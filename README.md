@@ -30,4 +30,5 @@ Environnement de développement de Cheick DIGRE – B1 DEV, IFRAN.
 | htop     | 3.3.0    | `sudo apt install -y htop`                          |
 | nano     | 7.2      | `sudo apt install -y nano`                          |
 | Node.js  | 26.xx    | dépôt NodeSource, puis `sudo apt install -y nodejs` |
-| npm      | 11.xx    | installé avec Node.js                               |
+| npm      | 11.xx    | installé avec Node.js                               
+
