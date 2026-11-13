@@ -5,4 +5,5 @@
 ## 2026-11-26 - Hébergement du dépôt : GitHub
 
 - **Décision :** publier notre depot local sur un depot distant 'github'.
-- **Autre possibilité :** Neant
+- **Autres possibilités :** Neant
+- **Raison :** 
