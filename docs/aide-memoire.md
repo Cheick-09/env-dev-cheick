@@ -29,3 +29,10 @@
 
 ## Lire et chercher
 
+
+## Branches
+
+| Commande      | Ce qu'elle fait                                     | Exemple                                   |
+| --------      | ----------------------------------                  | -------------------------                 |
+| `git branch`  | Liste les branches de mon projet                    | `git branch`                              |
+| `git switch`  | Cree une nouvelle branch et se positione dessus     | `git switch -c ajout-section`             |

@@ -6,4 +6,4 @@
 
 - **Décision :** publier notre depot local sur un depot distant 'github'.
 - **Autres possibilités :** Neant
-- **Raison :** 
+- **Raison :**
