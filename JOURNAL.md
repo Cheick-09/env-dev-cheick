@@ -1,9 +1,19 @@
-## Journal des choix
+# Journal des choix
 
-## 2026-11-11 -installation de tree
+## 2026-11-17 - Installation de Node.js
 
-## 2026-11-26 - Hébergement du dépôt : GitHub
+- **Décision :** installer Node.js avec le dépôt NodeSource et apt.
+- **Autres possibilités :** le paquet nodejs d'Ubuntu, le site nodejs.org.
+- **Raison :** NodeSource donne la version LTS récente, et les commandes peuvent être écrites dans mon README pour être refaites à l'identique.
 
-- **Décision :** publier notre depot local sur un depot distant 'github'.
-- **Autres possibilités :** Neant
-- **Raison :**
+## 2026-11-03 - Système pour le terminal
+
+- **Décision :** utiliser Ubuntu avec WSL sur Windows 11.
+- **Autres possibilités :** PowerShell, Git Bash, une machine virtuelle.
+- **Raison :** WSL donne un vrai terminal Linux sans quitter Windows, et c'est le même environnement que celui du cours.
+
+## 2026-11-03 - Choix de l'éditeur
+
+- **Décision :** utiliser VS Code.
+- **Autres possibilités :** Notepad++, Vim, Sublime Text.
+- **Raison :** VS Code s'intègre à WSL, a un terminal intégré et gère bien le Markdown et Git.

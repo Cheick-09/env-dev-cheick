@@ -29,10 +29,33 @@
 
 ## Lire et chercher
 
+| Commande   | Ce qu'elle fait                                 |Exemple                 |
+| ---------- | ----------------------------------------------- |----------------------- |
+| `cat`      | Affiche tout le fichier                         | `cat notes.txt`        |
+| `less`     | Affiche page par page (`q` pour quitter)        | `less notes.txt`       |
+| `head -n`  | Affiche les premières lignes                    | `head -n 5 notes.txt`  |
+| `tail -n`  | Affiche les dernières lignes                    | `tail -n 5 notes.txt`  |
+| `wc -l`    | Compte les lignes                               | `wc -l notes.txt`      |
+| `grep`     | Affiche les lignes qui contiennent un mot       | `grep ERROR app.log`   |
+| `grep -i`  | Pareil, sans tenir compte des majuscules        | `grep -i error app.log`|
+| `grep -c`  | Compte les lignes qui contiennent le mot        | `grep -c ERROR app.log`|
+| `grep -r`  | Cherche dans le dossier et ses sous-dossiers    | `grep -r "todo" .`     |
+| `grep -rl` | Affiche seulement les noms des fichiers trouvés | `grep -r -l "todo" .`  |
+| `find`     | Retrouver un fichier par son nom                | `find . -a "todo" `    |
+
+## Enregistrer et enchaîner
+
+| Symbole | Ce qu'il fait                                         | Exemple                        |
+| ------- | ----------------------------------------------------- | --------------------           |
+| `>`     | Écrit le résultat dans un fichier (efface le contenu) | `ls > liste.txt`               |
+| `>>`    | Ajoute le résultat à la fin du fichier                | `echo "Idée 2" >> idee.txt'    |
+| `\|`    | Donne le résultat d'une commande à la suivante        | `grep ERROR app.log \| wc -l`  |
+| `sort`  | Trie les lignes par ordre alphabétique                | `sort liste.txt`               |
+
 
 ## Branches
 
-| Commande      | Ce qu'elle fait                                     | Exemple                                   |
-| --------      | ----------------------------------                  | -------------------------                 |
-| `git branch`  | Liste les branches de mon projet                    | `git branch`                              |
-| `git switch`  | Cree une nouvelle branch et se positione dessus     | `git switch -c ajout-section`             |
+| Commande      | Ce qu'elle fait                                     |     Exemple                   |
+| --------      | -----------------------------------------------       -------------------------     |
+| `git branch`  | Liste les branches de mon projet                    | `git branch                   |
+| `git switch`  | Cree une nouvelle branch et se positione dessus     | `git switch -c  ajout-section |
