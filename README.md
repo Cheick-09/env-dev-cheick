@@ -1,4 +1,4 @@
-# env-dev-cheick
+# env-dev-cheick (B1 DEV, IFRAN)
 
 Environnement de développement de Cheick DIGRE – B1 DEV, IFRAN.
 
