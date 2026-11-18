@@ -59,3 +59,9 @@
 | --------      | -----------------------------------------------       -------------------------     |
 | `git branch`  | Liste les branches de mon projet                    | `git branch                   |
 | `git switch`  | Cree une nouvelle branch et se positione dessus     | `git switch -c  ajout-section |
+
+## Astuce de yoann
+
+| Commande           | Ce qu'elle fait                     | Exemple                    |
+|---------------     |-----------------------------------  |----------------------      |
+| `kill`             | Demande à un processus de s'arrêter | `kill 1234`                |
