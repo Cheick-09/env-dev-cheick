@@ -60,3 +60,4 @@ Résultat attendu : une version pour Ubuntu, Git, Node.js, npm et tree.
 | `docs/aide-memoire.md`  | Aide-mémoire des commandes du terminal et de Git            |
 | `scripts/installer.sh`  | Installe Git, Node.js, npm et tree dans Ubuntu              |
 | `scripts/verifier.sh`   | Affiche les versions des outils installés                   |
+| `docs/reseau.md`        | résumé des commandes reseaux                                |
