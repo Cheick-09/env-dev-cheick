@@ -28,3 +28,23 @@
 | `ping -c 4 <nom>`  | Envoie 4 paquets à la machine pour tester si elle répond et en combien de temps |
 | `nslookup <nom>`   | Interroge le DNS pour traduire un nom de domaine en adresse IP                  |
 | `curl ifconfig.me` | Affiche l'adresse IP publique de ma connexion Internet                          |
+
+## Le trajet d'une requête
+
+Quand je tape `https://github.com` dans mon navigateur :
+
+1. URL : je tape l'adresse, le navigateur (client) s'en occupe.
+2. DNS : il demande l'IP de `github.com` sa me donne `140.82.121.3`.
+3. Connexion : il contacte ce serveur, qui accepte.
+4. HTTPS : le serveur montre son certificat, le navigateur le vérifie, puis tout est chiffré.
+5. Requête : il envoie `GET /` « donne-moi la page d'accueil ».
+6. Réponse : le serveur renvoie `200 OK` et la page HTML, que le navigateur affiche.
+
+## Les codes de réponse HTTP
+
+| Code | Nom                   | Ce que ça veut dire         | Exemple que j'ai vu                        |
+| ---- | --------------------- | --------------------------- | ------------------------------------------ |
+| 200  | OK                    | Tout va bien                | Page d'accueil de GitHub                   |
+| 301  | Moved Permanently     | La page a changé d'adresse  | `http://github.com` → `https://github.com` |
+| 404  | Not Found             | La page n'existe pas        | Lien de dépôt mal écrit                    |
+| 500  | Internal Server Error | Le serveur a planté         | (pas vu)                                   |
