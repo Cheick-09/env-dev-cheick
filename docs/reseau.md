@@ -48,3 +48,30 @@ Quand je tape `https://github.com` dans mon navigateur :
 | 301  | Moved Permanently     | La page a changé d'adresse  | `http://github.com` → `https://github.com` |
 | 404  | Not Found             | La page n'existe pas        | Lien de dépôt mal écrit                    |
 | 500  | Internal Server Error | Le serveur a planté         | (pas vu)                                   |
+
+## Les ports
+
+| Port | Service                                   | Exemple d'URL            |
+| ---- | ----------------------------------------- | ------------------------ |
+| 80   | HTTP : le web non chiffré                 | `http://exemple.com`     |
+| 443  | HTTPS : le web chiffré (sécurisé)         | `https://github.com`     |
+| 8000 | Serveur de test sur mon propre ordinateur | `http://localhost:8000`  |
+
+## Diagnostiquer une erreur
+
+Les 4 questions, dans l'ordre :
+
+1. Le nom est-il trouvé ? → `nslookup <nom>`
+2. La machine répond-elle ? → `ping -c 4 <nom>`
+3. Le port est-il ouvert ? → `nc -zv <nom> <port>`
+4. Que répond le serveur ? → `curl -I <url>` (regarder le code : 200, 404, 500…)
+
+### Exemple : une panne que j'ai réparée
+
+### Exemple : une panne que j'ai réparée
+
+- **Symptôme :** je lance un deuxième site avec `python3 -m http.server 8000` et ça plante. La dernière ligne du message dit `Address already in use`.
+- **Étape :** question 3 (le port est-il libre ?). Je regarde les ports ouverts avec `ss -tln` : le port 8000 est déjà utilisé par mon premier site.
+- **Cause :** un port ne peut servir qu'à un seul programme à la fois. Le premier serveur occupait déjà le port 8000.
+- **Correction :** je lance la deuxième copie sur un autre port : `python3 -m http.server 8001`.
+- **Vérification :** j'ouvre `http://localhost:8001` dans le navigateur : les deux sites marchent en même temps. `ss -tln` montre les ports 8000 et 8001 en écoute (`LISTEN`). J'arrête le deuxième serveur avec `Ctrl + C`.
